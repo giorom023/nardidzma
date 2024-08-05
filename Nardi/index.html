@@ -1,0 +1,54 @@
+<!-- index.html (continued) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="init();">
+    <!-- Your HTML body content -->
+    <canvas id="myCanvas">
+      Your browser does not support the canvas tag.
+    </canvas>
+    <canvas id="starCanvas" width="400" height="400"></canvas>
+
+    <div id="control">
+      <button id="resetButton">Reset</button>
+      <button id="undoButton">Undo</button>
+      <div id="colorPicker" class="color-picker">
+        <div
+          class="color-option"
+          style="background: linear-gradient(135deg, #ff5733, #33ff57, #3357ff)"
+        ></div>
+        <div
+          class="color-option"
+          style="background: linear-gradient(135deg, #ff33a6, #a633ff, #33fff2)"
+        ></div>
+        <div
+          class="color-option"
+          style="background: linear-gradient(135deg, #33ff57, #3357ff, #ff33a6)"
+        ></div>
+        <div class="color-picker-buttons">
+          <button onclick="changeColor()">Apply</button>
+          <button onclick="closeColorPicker()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <button id="changeColorButton">Change Color</button>
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="mousePos"></div>
+    <div id="statusInfo"></div>
+<script src="script.js"></script>
+  </body>
+</html>
